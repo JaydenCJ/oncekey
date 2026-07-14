@@ -9,7 +9,7 @@ description = "Idempotency keys and a SQLite ledger giving agent tool effects ex
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
-authors = [{ name = "JaydenCJ" }]
+authors = [{ name = "JaydenCJ", email = "aisingioro.kiyon@gmail.com" }]
 keywords = ["idempotency", "exactly-once", "agent", "tool-calling", "sqlite", "ledger", "retry", "deduplication"]
 classifiers = [
     "Development Status :: 3 - Alpha",
