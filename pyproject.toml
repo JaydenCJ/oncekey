@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oncekey"
+version = "0.1.0"
+description = "Idempotency keys and a SQLite ledger giving agent tool effects exactly-once semantics."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "JaydenCJ" }]
+keywords = ["idempotency", "exactly-once", "agent", "tool-calling", "sqlite", "ledger", "retry", "deduplication"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Database",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+oncekey = "oncekey.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/JaydenCJ/oncekey"
+Repository = "https://github.com/JaydenCJ/oncekey"
+Issues = "https://github.com/JaydenCJ/oncekey/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

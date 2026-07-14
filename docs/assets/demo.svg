@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="430" viewBox="0 0 720 430" font-family="Menlo, Consolas, monospace" font-size="14">
+  <rect width="720" height="430" rx="10" fill="#101418"/>
+  <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+  <text x="360" y="27" fill="#8b949e" text-anchor="middle" font-size="12">oncekey — the retried agent sends the email once</text>
+  <g fill="#c9d1d9">
+    <text x="24" y="62"><tspan fill="#7ee787">$</tspan> python quickstart.py</text>
+    <text x="24" y="86">{'message_id': 'msg-1', 'to': 'ops@example.test'}</text>
+    <text x="24" y="108">{'message_id': 'msg-1', 'to': 'ops@example.test'}  <tspan fill="#8b949e"># the retry, replayed</tspan></text>
+    <text x="24" y="130">emails actually sent: <tspan fill="#7ee787">1</tspan></text>
+    <text x="24" y="166"><tspan fill="#7ee787">$</tspan> oncekey stats effects.db</text>
+    <text x="24" y="190"><tspan fill="#79c0ff">oncekey stats</tspan> — effects.db</text>
+    <text x="24" y="212">entries:               1   (committed 1, failed 0, in flight 0)</text>
+    <text x="24" y="234">attempts started:      1</text>
+    <text x="24" y="256">duplicates suppressed: <tspan fill="#f778ba">1</tspan></text>
+    <text x="24" y="290" fill="#d2a8ff">TOOL        ENTRIES  COMMITTED  FAILED  IN-FLIGHT  REPLAYS</text>
+    <text x="24" y="312"><tspan fill="#7ee787">send_email</tspan>        1          1       0          0        <tspan fill="#f778ba">1</tspan></text>
+    <text x="24" y="348"><tspan fill="#7ee787">$</tspan> oncekey run effects.db --key deploy-42 -- ./release.sh</text>
+    <text x="24" y="372">release tagged</text>
+    <text x="24" y="394" fill="#8b949e">[oncekey] replayed shell:deploy-42 (recorded exit 0, replay #1)</text>
+  </g>
+</svg>

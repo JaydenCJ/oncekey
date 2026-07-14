@@ -1,0 +1,38 @@
+# --- dependencies ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# --- build outputs ---
+build/
+dist/
+out/
+wheels/
+
+# --- local ledgers (never commit effect history) ---
+*.db
+*.db-wal
+*.db-shm
+
+# --- env & secrets ---
+.env
+.env.*
+!.env.example
+
+# --- caches / editor / OS ---
+.DS_Store
+.idea/
+.vscode/
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage/
+.coverage
+htmlcov/
+*.log
+tmp/
